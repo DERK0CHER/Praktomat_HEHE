@@ -18,6 +18,12 @@ run_3: build
 run_4: build
 	gcc  -o build/Flight-distance Flight-distance.c
 	./build/Flight-distance
+run_5: build
+	gcc  -o build/Digits Digits.c
+	./build/Digits
+run_5: build
+	gcc -o build/Atmos AtmosphericCalculations.c
+	./build/Atmos
 # Clean up the build directory
 clean:
 	rm -rf build

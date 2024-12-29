@@ -1,10 +1,21 @@
 
 #include<stdio.h>
 
+void Math(int a);
+
+int main() {
+    int n;
+
+    printf("Please enter the number which should be factorized:");
+    scanf("%d", &n);
+
+    Math(n);
+
+    return 0;
+}
     void Math(int a){
-   
-        if (a <= 1) {
-        printf("The entered number is invalid!\n");
+           if (a <= 1) {
+        printf("The entered number is invalid!");
         return;
         }
         while (a % 2 == 0) {
@@ -25,14 +36,3 @@
     printf("\n");
  
     }
-
-int main() {
-    int n;
-
-    printf("Please enter the number which should be factorized:");
-    scanf("%d", &n);
-
-    Math(n);
-
-    return 0;
-}

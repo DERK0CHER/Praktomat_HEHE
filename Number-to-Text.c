@@ -1,25 +1,5 @@
 #include <stdio.h>
 
-int main() {
-    int number;
-    while (1) {
-        printf("Enter a number between 0 and 999: ");
-        if (scanf("%d", &number) != 1) { // Check for invalid input
-            printf("Invalid input. Please enter a number.\n");
-            while (getchar() != '\n'); // Clear input buffer
-            continue;
-        }
-
-        if (number < 0 || number > 999) {
-            printf("Wrong BEEP, try again!\n");
-        } else {
-            number_to_text(number);
-            printf("\n");
-        }
-    }
-    return 0;
-}
-
 
 //Function to print the number as text
 void Number_to_text(int number) {
@@ -55,4 +35,23 @@ void number_to_text(int number) {
     for (int i = count - 1; i >= 0; i--) {
         Number_to_text(digits[i]);
     }
+}
+int main() {
+    int number;
+    while (1) {
+        printf("Enter a number between 0 and 999: ");
+        if (scanf("%d", &number) != 1) { // Check for invalid input
+            printf("Invalid input. Please enter a number.\n");
+            while (getchar() != '\n'); // Clear input buffer
+            continue;
+        }
+
+        if (number < 0 || number > 999) {
+            printf("Wrong number, try again!\n");
+        } else {
+            number_to_text(number);
+            printf("\n");
+        }
+    }
+    return 0;
 }
