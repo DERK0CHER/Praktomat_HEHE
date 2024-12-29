@@ -26,4 +26,4 @@ run_5: build
 	./build/Atmos
 # Clean up the build directory
 clean:
-	rm -rf build
+	rm -rf /build
